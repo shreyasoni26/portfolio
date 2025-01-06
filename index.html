@@ -1,9 +1,34 @@
-<html>
+<!-- <html>
     <body>
         <h1>This is a cat.</h1>
         <img
             src="https://qnweldgnqjbceidrndmm.supabase.co/storage/v1/object/public/imgs2/./cat.jpg?"
             alt="cat"
+        />
+    </body>
+</html> -->
+
+<html>
+    <head>
+        <style>
+            img {
+                width: 200px;
+                transition: transform 1s ease;
+            }
+        </style>
+        <script>
+            function shiftImage() {
+                const image = document.querySelector("img");
+                image.style.transform = "translateX(300px)";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>This is a cat.</h1>
+        <img
+            src="https://somerandomurlcat.jpg?"
+            alt="cat"
+            onclick="shiftImage()"
         />
     </body>
 </html>
