@@ -17,14 +17,24 @@
             }
         </style>
         <script>
+            let isMovedRight = false;
+
             function shiftImage() {
                 const image = document.querySelector("img");
-                image.style.transform = "translateX(300px)";
+
+                if (isMovedRight) {
+                    image.style.transform = "translateX(0px)";
+                } else {
+                    image.style.transform = "translateX(300px)";
+                }
+
+                isMovedRight = !isMovedRight;
             }
         </script>
     </head>
     <body>
         <h1>This is a cat.</h1>
+        <h5>Click on the cat to see something fun</h5>
         <img
             src="https://qnweldgnqjbceidrndmm.supabase.co/storage/v1/object/public/imgs2/./cat.jpg?"
             alt="cat"
